@@ -80,6 +80,7 @@ and then open link
 1. Add More Architecture Options
 2. Add another loss functions options
 3. More flexibility to choose parameters
+4. Genrated Video is not very much impressive , so correct it.
 
 
 
