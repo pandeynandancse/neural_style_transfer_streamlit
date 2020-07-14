@@ -237,23 +237,23 @@ try:
       cv2.imwrite(f'./outputs/images/color_img{epoch}.jpg ', output_image)
     return
 
+  if st.button("Start NST"):
+    for epoch, output_image in nst(content_image, style_image, epochs, size, 
+                                            content_layer_weights, style_layer_weights, 
+                                            content_weight, style_weight, 
+                                            total_weight, optimizer):
 
-  for epoch, output_image in nst(content_image, style_image, epochs, size, 
-                                          content_layer_weights, style_layer_weights, 
-                                          content_weight, style_weight, 
-                                          total_weight, optimizer):
+      progress_text.text(f"Epoch {epoch}/{epochs}")
 
-    progress_text.text(f"Epoch {epoch}/{epochs}")
+      progress_bar.progress(epoch/epochs)
+      
+      op= cv2.normalize(output_image, None, 255, 0, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
+      output_image_placeholder.image(output_image, caption='Styled Image', use_column_width=True, clamp=True, channels='RGB')
 
-    progress_bar.progress(epoch/epochs)
-    
-    op= cv2.normalize(output_image, None, 255, 0, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
-    output_image_placeholder.image(output_image, caption='Styled Image', use_column_width=True, clamp=True, channels='RGB')
-
-    if images_required ==1 or video_required ==1:
-      write_video_and_audio(epoch,output_image, content_file_name,content_image, video_required,images_required)
-  progress_text.text(f"NST for {epochs} epochs Completed!")
-  progress_bar.empty()
+      if images_required ==1 or video_required ==1:
+        write_video_and_audio(epoch,output_image, content_file_name,content_image, video_required,images_required)
+    progress_text.text(f"NST for {epochs} epochs Completed!")
+    progress_bar.empty()
 
   if video_required==1:
     video.release()
