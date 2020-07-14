@@ -93,8 +93,8 @@ If you'd like to do some contribution, feel free to do so by opening a pull requ
 
 ![](https://forthebadge.com/images/badges/made-with-python.svg)
 
-[<img target="_blank" src="https://i.imgur.com/Ys7e1SG.png" width=170>](https://www.streamlit.io/)
-[<img target="_blank" src="https://i.imgur.com/rENjoBA.png" width=280>](https://www.tensorflow.org/) 
+[<img target="_blank" src="https://i.imgur.com/jAyHARm.png" width=170>](https://www.streamlit.io/)
+[<img target="_blank" src="https://i.imgur.com/rENjoBA.png" width=170>](https://www.tensorflow.org/) 
 
 
 
