@@ -62,7 +62,7 @@ git clone https://github.com/pandeynandancse/neural_style_transfer_streamlit.git
 
 d) Move into cloned directory
 ```bash
-cd neural_style_transfer_streamli
+cd neural_style_transfer_streamlit
 ```
 e) Now install all requirements
 ```bash
