@@ -32,10 +32,14 @@ A web Application developed via streamlit for neural style transfer using Tensor
 |    ├── content_images
 |    ├── style_images
 |    ├── logo_image
+├── outputs
+|    ├── images
+|    ├── videos
 ├── final.py
 ├── requirements.txt
 
 ```
+In above directory structure outputs folder is created only when images and videos is required by user. Facility for choosing this option is given at top of side-bar of application.
 
 ## Installation
 1. Windows user can double click on activation.bat file to install required package
