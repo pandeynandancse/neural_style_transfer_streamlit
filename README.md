@@ -35,6 +35,8 @@ A web Application developed via streamlit for neural style transfer using Tensor
 ├── outputs
 |    ├── images
 |    ├── videos
+├── README.md
+├── activation.bat
 ├── final.py
 ├── requirements.txt
 
@@ -60,19 +62,19 @@ git clone https://github.com/pandeynandancse/neural_style_transfer_streamlit.git
 
 d) Move into cloned directory
 ```bash
-cd springer_book_downloader
+cd neural_style_transfer_streamli
 ```
 e) Now install all requirements
 ```bash
 pip install -r requirements.txt
 ```
 ## Run
-1. After successfull installation windows user can directly open this link : https://127.0.0.1:5000
+1. After successfull installation windows user can directly open the link that will be appeared
 2. After successful installation open type
 ```bash
 streamlit run final.py
  ```
-and then open link : https://127.0.0.1:5000
+and then open link 
 
 ## To Do
 1. Add More Architecture Options
