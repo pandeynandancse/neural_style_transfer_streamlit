@@ -32,7 +32,7 @@ def get_layer_weights(conv_layers, chosen_layers, layer_type):
   layer_weight_func = lambda layer_name, chosen_layers : st.sidebar.slider(
       label=layer_name, min_value=0.0, max_value=max_layer_weight,
       value=1.0 if layer_name in chosen_layers else 0.0,
-      step=0.05, key='slider_'+layer_name+'_'+layer_type)
+      step=0.05, key='slider_'+layer_name+'and'+layer_type)
 
   data = pd.DataFrame.from_records(columns=['layer', 'weight'],
     data=[(name, layer_weight_func(name, chosen_layers)) for name in conv_layers])
@@ -57,7 +57,7 @@ def compute_gram_matrix(input_tensor):
 def build_content_layer_map(features, content_layers):
   content_map = { layer_name : features[layer_name] for layer_name in content_layers }
   return content_map
-# / (feature_layer_name.shape[1]*feature_layer_name.shape[2])
+
 def build_style_layer_map(features, style_layers):
   gram_norm = lambda feature_layer_name: compute_gram_matrix(feature_layer_name) 
   style_map = { layer_name : gram_norm(features[layer_name])
